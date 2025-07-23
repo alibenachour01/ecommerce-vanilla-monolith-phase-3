@@ -8,8 +8,10 @@ import { requireRole } from "../middlewares/authorize";
 
 // PUBLIC routes
 const publicUserRouter = Router();
+
 // POST /users/register
 publicUserRouter.post("/register", validateBody(registerUserSchema), registerUser);
+
 // POST /users/login
 publicUserRouter.post("/login", validateBody(loginUserSchema), loginUser);
 

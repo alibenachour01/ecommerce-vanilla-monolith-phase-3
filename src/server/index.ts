@@ -7,6 +7,7 @@ import { AppDataSource } from "../../config/data-source.dev";
 import { appRouter } from "../router/app.router";
 import { errorHandler } from "../middlewares/error-handler";
 import { rateLimiter } from "../middlewares/rate-limiter";
+import { setupSwagger } from "../../config/swagger";
 
 dotenv.config();
 
@@ -66,6 +67,9 @@ App.use(
 
 // Apply rate limiting middleware
 App.use(rateLimiter);
+
+// Setup Swagger documentation
+setupSwagger(App);
 
 // Mount all app routes
 App.use("/", appRouter);
