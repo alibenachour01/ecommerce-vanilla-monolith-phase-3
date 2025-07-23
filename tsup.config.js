@@ -1,6 +1,6 @@
 // tsup.config.ts
 export default {
-  entry: ["src/**/*.ts", "config/data-source.ts"],
+  entry: ["src/**/*.ts", "config/data-source.ts", "config/swagger.ts"],
   outDir: "dist",
   format: ["esm"],
   target: "esnext",
