@@ -1,0 +1,10 @@
+// tsup.config.ts
+export default {
+  entry: ["src/**/*.ts", "config/data-source.ts"],
+  outDir: "dist",
+  format: ["esm"],
+  target: "esnext",
+  sourcemap: true,
+  dts: false,
+  clean: true,
+}
